@@ -2,395 +2,194 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
-    
+    <title>Koketso Moilwe's Portfolio Website</title>
   </head>
 
   <body>
 
-    <!--Desktop Navigation-->
-    <nav id="desktop-nav">
-      <div class="logo">Koketso Moilwe</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+    <!--Navigation Bar-->
+    <nav>
+      <div class="nav__bar">
+        <a href="#"><span class="logo nav__logo">K</span> Koketso</a>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-3-line"></i>
+        </div>
       </div>
+
+      <!--Nvigation Links-->
+
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#service">Skills</a></li>
+        <li><a href="#portfolio">Projects</a></li>
+        <li><a href="#contact" class="btn">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn__large">Contact</a>
     </nav>
 
-    <!--Hamburger Navigation-->
-    <nav id="hamburger-nav">
-      <div class="logo">Koketso Moilwe</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+    <header class="section__container header__container" id="home">
+      <div class="header__image">
+        <img src="img/Image 1.jpg" alt="header" />
+      </div>
+      <div class="header__content">
+        <div>
+          <h1>Koketso<br />Junior Frontend<br />Developer</h1>
         </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        <p class="section__description">
+          I'm a dedicated web developer with a creative flair and a penchant for
+          turning lines of code into captivating online experiences. My journey
+          in the digital realm began a year ago, and I've been honing my skills
+          in front-end since.
+        </p>
+        <div class="header__btn">
+          <button class="btn">Hire Me Now</button>
         </div>
       </div>
-    </nav>
+    </header>
 
+    <section class="section__container about__container" id="about">
+      <div class="about__image">
+        <img src="img/bg.png" alt="bg" class="about__bg-1" />
+        <img src="img/bg.png" alt="bg" class="about__bg-2" />
+        <img src="img/Image 2.jpg" alt="about" class="about__img" />
+      </div>
 
- <!--Profile-->
+      <div class="about__content">
+        <h2 class="section__header">About Me</h2>
+        <p class="section__description">
+          A passionate web developer with a creative flair and a knack for
+          turning visions into reality. My journey in web development began with
+          a fascination for coding and design, and it has evolved into a career
+          where I blend aesthetics with functionality. With a focus on user
+          experience and a commitment to staying updated with the latest
+          industry trends, I'm dedicated to creating web solutions that not only
+          meet but exceed expectations.
+        </p>
+        <div class="about__btn">
+          <button class="btn">Download CV</button>
+        </div>
+      </div>
+    </section>
 
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./img/Image 1.jpg" alt="Koketso Moilwe profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Kokesto Moilwe</h1>
-        <p class="section__text__p2">Frontend Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
+    <section class="section__container service__container" id="service">
+      <h2 class="section__header">My Best Services</h2>
+      <div class="service__grid">
+        <div class="service__card">
+          <span><i class="ri-window-fill"></i></span>
+          <h4>Website Design</h4>
+          <p>
+            We craft user-friendly interfaces that engage visitors and help you
+            achieve your online goals with minimum efforts.
+          </p>
         </div>
-        <div id="socials-container">
-          <img
-            src="./img/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://linkedin.com/'"
-          />
-          <img
-            src="./img/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/'"
-          />
+        <div class="service__card">
+          <span><i class="ri-store-line"></i></span>
+          <h4>E-commerce Solutions</h4>
+          <p>
+            We build secure, scalable, and user-centric online stores that
+            enhance the shopping experience and drive conversions.
+          </p>
         </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./img/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
+        <div class="service__card">
+          <span><i class="ri-smartphone-line"></i></span>
+          <h4>Mobile Development</h4>
+          <p>
+            From iOS to Android, we create apps that deliver seamless
+            performance and keep users coming back for more.
+          </p>
         </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Skills:</h3>
-              <p>Skills: 
-                <br />HTML5
-                <br />CSS
-                <br />Javascript (Intermediate)
-                <br /> React
-            </p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./img/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-              reprehenderit et laborum, rem, dolore eum quod voluptate
-              exercitationem nobis, nihil esse debitis maxime facere minus sint
-              delectus velit in eos quo officiis explicabo deleniti dignissimos.
-              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-              reiciendis ea magnam? Nulla, impedit fuga!
-            </p>
-          </div>
+        <div class="service__card">
+          <span><i class="ri-share-fill"></i></span>
+          <h4>Content Marketing</h4>
+          <p>
+            Our services include creating blog posts, videos, and social media
+            content that drives traffic and engagement.
+          </p>
         </div>
-      </div>
-      <img
-        src="./img/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./img/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./img/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./img/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SASS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./img/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./img/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./img/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./img/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./img/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./img/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./img/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
+        <div class="service__card">
+          <span><i class="ri-seo-line"></i></span>
+          <h4>SEO</h4>
+          <p>
+            Our SEO strategies are tailored to your specific goals, helping you
+            reach your target audience and grow your online presence.
+          </p>
         </div>
-      </div>
-      <img
-        src="./img/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./img/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./img/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./img/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./img/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./img/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:examplemail@gmail.com">Example@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./img/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+        <div class="service__card">
+          <span><i class="ri-share-circle-line"></i></span>
+          <h4>Digital Marketing</h4>
+          <p>
+            From pay-per-click (PPC) advertising to social media marketing, we
+            ensure your brand stands out in the crowded digital landscape.
+          </p>
         </div>
       </div>
     </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+
+    <section class="section__container portfolio__container" id="portfolio">
+      <h2 class="section__header">My Portfolio</h2>
+      <p class="section__description">
+        Explore a showcase of my diverse projects, demonstrating my skills in
+        web development, design, and beyond. Each project reflects my passion
+        for creating impactful and innovative digital experiences.
+      </p>
+      <div class="portfolio__grid">
+        <div class="portfolio__card">
+          <img src="assets/project-1.jpg" alt="portfolio" />
         </div>
-      </nav>
-      <p>Copyright &#169; 2023 John Doe. All Rights Reserved.</p>
+        <div class="portfolio__card">
+          <img src="assets/project-2.jpg" alt="portfolio" />
+        </div>
+        <div class="portfolio__card">
+          <img src="assets/project-3.jpg" alt="portfolio" />
+        </div>
+        <div class="portfolio__card">
+          <img src="assets/project-4.jpg" alt="portfolio" />
+        </div>
+        <div class="portfolio__card">
+          <img src="assets/project-5.jpg" alt="portfolio" />
+        </div>
+        <div class="portfolio__card">
+          <img src="assets/project-6.jpg" alt="portfolio" />
+        </div>
+      </div>
+      <div class="portfolio__banner">
+        <div class="portfolio__banner__card">
+          <span><i class="ri-macbook-line"></i></span>
+          <h4>2 Projects</h4>
+          <p>Delivered</p>
+        </div>
+        
+       
+      </div>
+    </section>
+
+    <section class="section__container contact__container" id="contact">
+      <div class="logo">KM</div>
+      <h2 class="section__header">Connect With Me!</h2>
+      <p class="section__description">
+        An open invitation to connect, explore and looking foward to collaborative opportunities
+        on my personal portfolio website.
+      </p>
+      <div class="contact__socials">
+        <a href="#"><i class="ri-twitter-fill"></i></a>
+        <a href="#"><i class="ri-linkedin-fill"></i></a>
+        <a href="#"><i class="ri-behance-fill"></i></a>
+        <a href="#"><i class="ri-dribbble-line"></i></a>
+        <a href="#"><i class="ri-pinterest-line"></i></a>
+      </div>
+    </section>
+    <footer class="footer">
+      Copyright © 2023 Web Design. All rights reserved.
     </footer>
-    <script src="script.js"></script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
   </body>
 </html>
